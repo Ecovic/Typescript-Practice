@@ -1,4 +1,4 @@
-import PersonRepository from "./personRepository.ts";
+import PersonRepository from "./person.repository.ts";
 
 const repo = new PersonRepository();
 
