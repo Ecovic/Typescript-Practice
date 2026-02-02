@@ -1,7 +1,7 @@
 class Person {
-    _name: string; 
-    _age: number;
-    _city: string;
+    private _name: string; 
+    private _age: number;
+    private _city: string;
 
     constructor(name: string, age: number, city: string) {
 
@@ -30,9 +30,9 @@ class Person {
       return this._city;
     }
 
-    greet():void {
-        console.log("Hi, I'm "+ this._name + " from "+ this._city);
-    }
+    greet(): void {
+        console.log(`Hi, I'm ${this._name} from ${this._city}`);
+    }   
 
     celebrateBirthday(): void {
         this._age += 1;
