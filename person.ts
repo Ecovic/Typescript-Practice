@@ -38,7 +38,7 @@ class Person {
         this.age += 1;
     }
 
-    updatecity(newCity:string): void {
+    updateCity(newCity:string): void {
         if (!newCity || newCity.trim().length === 0) {
         throw new Error("City must not be empty");
         }
