@@ -1,7 +1,7 @@
 class Person {
-    private _name: string; 
-    private _age: number;
-    private _city: string;
+    private name: string; 
+    private age: number;
+    private city: string;
 
     constructor(name: string, age: number, city: string) {
 
@@ -13,51 +13,51 @@ class Person {
         throw new Error("Age must be a positive number");
         }   
 
-        this._name = name;
-        this._age = age;
-        this._city = city;
+        this.name = name;
+        this.age = age;
+        this.city = city;
     }
 
-    get name(): string {
-        return this._name;
+    get Name(): string {
+        return this.name;
     }
 
-    get age(): number {
-     return this._age;
+    get Age(): number {
+     return this.age;
     }
 
-    get city(): string {
-      return this._city;
+    get City(): string {
+      return this.city;
     }
 
     greet(): void {
-        console.log(`Hi, I'm ${this._name} from ${this._city}`);
+        console.log(`Hi, I'm ${this.name} from ${this.city}`);
     }   
 
     celebrateBirthday(): void {
-        this._age += 1;
+        this.age += 1;
     }
 
-    updatecity(newcity:string): void {
-        if (!newcity || newcity.trim().length === 0) {
+    updatecity(newCity:string): void {
+        if (!newCity || newCity.trim().length === 0) {
         throw new Error("City must not be empty");
         }
-        this._city = newcity
+        this.city = newCity
     }
     
     isAdult(): boolean {
-        return this._age >= 18;
+        return this.age >= 18;
     }
     
     hasSameCity(other: Person): boolean {
-        return this._city === other.city;
+        return this.city === other.city;
     }
 
     toJSON(): object {
         return {
-        name: this._name,
-        age: this._age,
-        city: this._city
+        name: this.name,
+        age: this.age,
+        city: this.city
         };
     }
 
